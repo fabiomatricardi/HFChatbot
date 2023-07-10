@@ -1,0 +1,10 @@
+➜  VMdisks mkdir YourHFChat
+➜  VMdisks cd YourHFChat 
+➜  YourHFChat python3.10 -m venv venv
+➜  YourHFChat source venv/bin/activate
+---
+pip install transformers
+python3.10 -m pip install --upgrade pip
+pip install langchain
+pip install huggingface_hub
+pip install streamlit==1.24.0
