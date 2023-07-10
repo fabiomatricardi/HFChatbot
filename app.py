@@ -5,9 +5,7 @@ import requests
 # Internal usage
 import os
 # Set HF API token  and HF repo
-#yourHFtoken = "hf_xxxxxx" #here your HF token
-
-yourHFtoken = "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"
+yourHFtoken = "hf_xxxxxx" #here your HF token
 
 repo="HuggingFaceH4/starchat-beta"
 ### INITIALIZING STARCHAT FUNCTION MODEL
