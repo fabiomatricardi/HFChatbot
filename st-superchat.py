@@ -4,7 +4,6 @@ from langchain import HuggingFaceHub
 import requests
 # Internal usage
 import os
-import datetime
 from time import sleep
 
 #AVATARS
@@ -17,9 +16,9 @@ def writehistory(text):
         f.write(text)
         f.write('\n')
     f.close()
-### INITIALIZING STARCHAT FUNCTION MODEL
-# Set HF API key from Streamlit secrets
-yourHFtoken = "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"
+
+# Set HF API token
+yourHFtoken = "hf_xxxxxx" #here your HF token
 repo="HuggingFaceH4/starchat-beta"
 
 ### START STREAMLIT UI
@@ -30,7 +29,7 @@ st.subheader("using Starchat-beta")
 if "hf_model" not in st.session_state:
     st.session_state["hf_model"] = "HuggingFaceH4/starchat-beta"
 
-
+### INITIALIZING STARCHAT FUNCTION MODEL
 def starchat(model,myprompt, your_template):
     from langchain import PromptTemplate, LLMChain
     os.environ["HUGGINGFACEHUB_API_TOKEN"] = yourHFtoken
